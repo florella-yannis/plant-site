@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+h3 {
+  font-size: 1rem;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+section,
+footer {
+  padding: 0px 100px;
+}
+button {
+  border-style: none;
+}
+.btn {
+  background-color: #3e6553;
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+h1 {
+  font-size: 3.5rem;
+}
+/* header*/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+nav ul li {
+  margin: 0 10px;
+}
+nav ul li a {
+  color: black;
+  font-weight: 500;
+}
+.ri-plant-line {
+  color: #3e6553;
+  font-size: 1.3rem;
+}
+.ri-check-line {
+  padding: 1px;
+  background: #3e6553;
+  color: white;
+  border-radius: 2px;
+}
+.ri-shopping-basket-fill {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background: #3e6553;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+/*home */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0 120px 0;
+}
+.text-p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.text-p p {
+  position: relative;
+}
+.text-p a {
+  position: absolute;
+  bottom: 90px;
+}
+.img-p {
+  min-width: 300px;
+  max-width: 380px;
+}
+/*widget*/
+
+.follow {
+  text-align: center;
+}
+
+.follow p {
+  writing-mode: vertical-rl;
+  margin: 10px 0;
+  color: #3e6553;
+}
+
+.divider {
+  height: 22px;
+  width: 2px;
+  background-color: #3e6553;
+  margin: 10px 10px;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+.social-media ul li {
+  margin-bottom: 10px;
+}
+
+.social-media ul li a {
+  color: #3e6553;
+}
+.logo {
+  font-weight: 700;
+  display: flex;
+}
+/*about*/
+
+.about {
+  margin: 170px 0px;
+  display: flex;
+}
+.img-about {
+  min-width: 350px;
+  max-width: 420px;
+}
+.txt-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 60px;
+}
+.about a {
+  color: #3e6553;
+}
+/***step***/
+.steps {
+  padding: 30px 30px;
+  margin: 50px 100px;
+  background-color: #3e6553;
+  border-radius: 15px;
+}
+.steps h2 {
+  text-align: center;
+  color: #ffffff;
+}
+.steps-container {
+  display: flex;
+}
+.box-step {
+  margin: 30px 25px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+.step-number span {
+  background-color: #3e6553;
+  color: #ffff;
+  border-radius: 5px;
+  padding: 8px 9px;
+  margin: 10px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+/*products*/
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px 0px;
+}
+.text-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px 130px;
+  text-align: center;
+}
+.container-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 830px;
+}
+.box-product {
+  margin: 10px 30px;
+  max-width: 20%;
+  position: relative;
+}
+.cercle {
+  background: #e6efeb;
+  border-radius: 50%;
+  width: 145px;
+  height: 145px;
+  z-index: -10;
+  position: absolute;
+  top: 50px;
+  left: -22px;
+}
+
+.box-description {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*faq*/
+
+.questions {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #e6efeb;
+}
+.accordion-container {
+  padding: 10px 100px;
+}
+.accordion {
+  background-color: #ffffff;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #3e6553;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+/*****form****/
+.contact {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px 0px;
+  align-items: center;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+.input-container {
+  position: relative;
+  margin: 50px auto;
+  width: 500px;
+}
+
+.input-container input[type="text"],
+.input-container input[type="email"],
+.input-container textarea {
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+}
+
+.input-container .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ccc;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="text"]:valid ~ .label,
+.input-container input[type="email"]:focus ~ .label,
+.input-container input[type="email"]:valid ~ .label,
+.input-container textarea:focus ~ .label,
+.input-container textarea:valid ~ .label {
+  top: -20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+/*footer*/
+
+footer {
+  display: flex;
+  margin: 100px 0px;
+  justify-content: space-between;
+}
+
+footer .card img {
+  height: 35px;
+}
+footer form {
+  padding: 25px 15px;
+  background-color: #e6efeb;
+  border-radius: 5px;
+}
+footer form input {
+  padding: 25px 15px;
+  background-color: #e6efeb;
+  border-radius: 5px;
+}
+
+footer form input[type="email"] {
+  font-size: 16px;
+  border: none;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+}
