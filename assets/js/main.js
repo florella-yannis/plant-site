@@ -1,5 +1,22 @@
 /*=============== SHOW MENU ===============*/
 
+const menuIcon = document.getElementById("menuIcon");
+const navLinks = document.getElementById("nav-links");
+
+menuIcon.addEventListener('click', function () {
+  navLinks.classList.toggle('mobile-menu');
+  // Change l'icône selon la classe mobile-menu
+  if (navLinks.classList.contains('mobile-menu')) {
+    menuIcon.classList.remove('fa-bars');
+    menuIcon.classList.add('fa-xmark');
+  } else {
+    menuIcon.classList.remove('fa-xmark');
+    menuIcon.classList.add('fa-bars');
+  }
+});
+
+
+
 /*=============== REMOVE MENU MOBILE ===============*/
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
