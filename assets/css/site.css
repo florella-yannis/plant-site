@@ -46,6 +46,14 @@ section,
 footer {
   padding: 0px 100px;
 }
+
+@media screen and (max-width: 1035px) {
+  section,
+  footer {
+    padding: 0px 50px;
+  }
+}
+
 button {
   border-style: none;
 }
@@ -55,7 +63,21 @@ button {
   padding: 8px 10px;
   border-radius: 4px;
   width: max-content;
+  transition: 0.3s;
 }
+.btn:hover {
+  background-color: #3e6553d7;
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 4px;
+  width: max-content;
+}
+/* .btn i {
+  transition: 0.3s;
+}
+.btn:hover i {
+  transform: translateX(0.25rem);
+} */
 h1 {
   font-size: 3.5rem;
 }
@@ -117,6 +139,7 @@ nav ul li a {
     /* position: fixed; */
     top: 0;
     z-index: 100;
+    padding: 30px 50px;
   }
 
   header nav ul {
@@ -149,9 +172,10 @@ nav ul li a {
 /*home */
 .home {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  margin: 100px 0 120px 0;
+  margin: 150px 0;
+  position: relative;
 }
 .text-p {
   display: flex;
@@ -159,16 +183,41 @@ nav ul li a {
   justify-content: space-evenly;
   width: 50%;
 }
+.text-p h1 {
+  margin-top: 40px;
+}
 .text-p p {
-  margin-bottom: 20px;
+  margin: 25px 0;
 }
-.text-p a {
-}
+
 .img-p {
   min-width: 300px;
   max-width: 380px;
 }
+
+@media screen and (max-width: 1036px) {
+  .text-p h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .home {
+    flex-direction: column-reverse;
+  }
+  .text-p {
+    width: 100%;
+  }
+  .img-p img {
+    max-width: 80%;
+  }
+}
+
 /*widget*/
+.widget {
+  position: absolute;
+  top: 292px;
+  right: 22px;
+}
 
 .follow {
   text-align: center;
@@ -190,12 +239,16 @@ nav ul li a {
   display: flex;
   justify-content: center;
 }
-.social-media ul li {
-  margin-bottom: 10px;
-}
-
 .social-media ul li a {
   color: #3e6553;
+}
+.social-media ul li {
+  margin-bottom: 10px;
+  color: #3e6553;
+  transition: 0.3s;
+}
+.social-media ul li:hover {
+  transform: translateX(0.25rem);
 }
 .logo {
   font-weight: 700;
@@ -206,6 +259,7 @@ nav ul li a {
 .about {
   margin: 170px 0px;
   display: flex;
+  justify-content: space-around;
 }
 .img-about {
   min-width: 350px;
@@ -217,8 +271,30 @@ nav ul li a {
   justify-content: space-between;
   margin: 0 60px;
 }
+.txt-about h2 {
+  margin-bottom: 10px;
+}
+.txt-about h2,
+.txt-about p,
+.txt-about ul,
+.txt-about a {
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
 .about a {
   color: #3e6553;
+}
+
+@media screen and (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
+  }
+  .txt-about {
+    margin: 25px 0px;
+  }
 }
 /***step***/
 .steps {
@@ -233,6 +309,8 @@ nav ul li a {
 }
 .steps-container {
   display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
 }
 .box-step {
   margin: 30px 25px;
@@ -248,6 +326,16 @@ nav ul li a {
   margin: 10px;
   display: inline-block;
   font-weight: bold;
+}
+@media screen and (max-width: 1060px) {
+  .steps-container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  .steps {
+    margin: 50px 30px;
+  }
 }
 
 /*products*/
@@ -265,17 +353,32 @@ nav ul li a {
   margin: 80px 130px;
   text-align: center;
 }
+.text-products h2 {
+  margin-bottom: 20px;
+}
+.text-products p {
+  line-height: 2;
+}
 .container-products {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 830px;
+  max-width: 1000px;
 }
+
 .box-product {
   margin: 10px 30px;
-  max-width: 20%;
+  width: 20%;
   position: relative;
 }
+.box-product img {
+  transition: 0.3s;
+}
+.box-product:hover img {
+  transform: translateY(-0.5rem);
+  transition: 0.3s;
+}
+
 .cercle {
   background: #e6efeb;
   border-radius: 50%;
@@ -291,6 +394,24 @@ nav ul li a {
   display: flex;
   justify-content: space-evenly;
 }
+@media screen and (max-width: 880px) {
+  .box-product {
+    width: 28%;
+  }
+  .cercle {
+    width: 100px;
+    height: 100px;
+  }
+  .text-products {
+    margin: 80px 0px;
+  }
+}
+@media screen and (max-width: 657px) {
+  .cercle {
+    width: 90px;
+    height: 90px;
+  }
+}
 
 /*faq*/
 
@@ -299,11 +420,14 @@ nav ul li a {
   text-align: center;
   background-color: #e6efeb;
 }
+.questions h2 {
+  margin-bottom: 20px;
+}
 .accordion-container {
   padding: 10px 100px;
 }
 .accordion {
-  background-color: #ffffff;
+  background-color: #cad1ce;
   color: black;
   cursor: pointer;
   padding: 18px;
@@ -334,10 +458,16 @@ nav ul li a {
 
 .panel {
   padding: 0 18px;
-  background-color: #3e6553;
+  background-color: #ffffff;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+@media screen and (max-width: 880px) {
+  .accordion-container {
+    padding: 10px 30px;
+  }
 }
 /*****form****/
 .contact {
@@ -349,11 +479,31 @@ nav ul li a {
 .contact-info {
   display: flex;
   flex-direction: column;
+  width: 50%;
+}
+
+.contact-number,
+.contact-mail {
+  margin: 20px 0;
+}
+.formulaire {
+  width: 50%;
 }
 .input-container {
   position: relative;
-  margin: 50px auto;
-  width: 500px;
+  margin: 50px 20px;
+  max-width: 600px;
+}
+@media screen and (max-width: 880px) {
+  .contact {
+    flex-direction: column;
+  }
+  .contact-info {
+    width: 90%;
+  }
+  .formulaire {
+    width: 90%;
+  }
 }
 
 .input-container input[type="text"],
@@ -404,19 +554,20 @@ nav ul li a {
 
 footer {
   display: flex;
-  margin: 100px 0px;
+  padding: 100px 100px;
   justify-content: space-between;
+  background-color: #4caf5008;
+}
+
+.subscribe h3 {
+  margin-bottom: 10px;
 }
 
 footer .card img {
-  height: 35px;
+  height: 25px;
 }
 footer form {
-  padding: 25px 15px;
-  background-color: #e6efeb;
-  border-radius: 5px;
-}
-footer form input {
+  display: flex;
   padding: 25px 15px;
   background-color: #e6efeb;
   border-radius: 5px;
@@ -429,4 +580,54 @@ footer form input[type="email"] {
   background-color: transparent;
   outline: none;
   resize: none;
+}
+
+footer .logo {
+  margin: 20px 0;
+}
+.adress h3 {
+  margin: 20px 0;
+}
+.contact-us h3 {
+  margin: 20px 0;
+}
+.contact-us ul {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+.contact-us ul li {
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.contact-us ul li i {
+  color: #3e6553;
+}
+.contact-us ul li:hover {
+  transform: translateY(-0.25rem);
+}
+.card h3 {
+  margin: 20px 0;
+}
+.card-img {
+  display: flex;
+  gap: 15px;
+}
+
+@media screen and (max-width: 1101px) {
+  footer form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  footer {
+    flex-direction: column;
+  }
+  footer form {
+  }
+  footer .card img {
+    height: 20px;
+  }
 }
