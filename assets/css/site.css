@@ -149,6 +149,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 40px 100px;
+  background-color: white;
 }
 nav ul {
   display: flex;
@@ -254,7 +255,7 @@ nav ul li {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 150px 0 250px 0;
+  margin: 150px 0;
   position: relative;
 }
 .text-p {
@@ -337,7 +338,7 @@ nav ul li {
 /*about*/
 
 .about {
-  margin: 170px 0px;
+  margin: 100px 0px;
   display: flex;
   justify-content: space-around;
 }
