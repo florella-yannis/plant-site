@@ -1,13 +1,14 @@
-# Responsive Plants Website 🎍 
-## [Watch it on youtube](https://youtu.be/lpzExNZDizI)
-### Responsive Plants Website 🎍
+# Site Web Réactif sur les Plantes 🎍
 
-- Responsive Plants Website Using HTML, CSS and JavaScript.
-- Contains animations when scrolling.
-- Includes a dark and light mode.
-- Developed first with the Mobile First methodology, then for desktop.
-- Compatible with all mobile devices and with a beautiful and pleasant user interface.
+### Description
 
-Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/c/Bedimcode)
+Le **Site Web Réactif sur les Plantes** est un projet développé en **HTML**, **CSS** et **JavaScript**, mettant en avant la beauté des plantes. Ce site est entièrement responsive, s'adaptant parfaitement à tous les types d'appareils.
 
-![plants website](/preview.png)
+### Fonctionnalités
+
+- **Design responsive** : Optimisé pour les appareils mobiles et de bureau, avec une interface utilisateur attrayante.
+- **Animations** : Des animations fluides se déclenchent lors du défilement de la page.
+
+### À propos
+
+Ce projet a été développé avec l'objectif de créer un site web agréable et fonctionnel pour les amateurs de plantes.

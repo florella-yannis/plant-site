@@ -1,11 +1,12 @@
 /*=============== SHOW MENU ===============*/
-
 const menuIcon = document.getElementById("menuIcon");
 const navLinks = document.getElementById("nav-links");
 
+// Gérer l'ouverture/fermeture du menu
 menuIcon.addEventListener('click', function () {
   navLinks.classList.toggle('mobile-menu');
-  // Change l'icône selon la classe mobile-menu
+
+  // Changer l'icône selon la classe mobile-menu
   if (navLinks.classList.contains('mobile-menu')) {
     menuIcon.classList.remove('fa-bars');
     menuIcon.classList.add('fa-xmark');
@@ -15,11 +16,15 @@ menuIcon.addEventListener('click', function () {
   }
 });
 
-
-
-/*=============== REMOVE MENU MOBILE ===============*/
-
-/*=============== CHANGE BACKGROUND HEADER ===============*/
+// Fermer le menu lorsque l'on clique sur un lien
+const menuLinks = navLinks.querySelectorAll('a');
+menuLinks.forEach(link => {
+  link.addEventListener('click', function () {
+    navLinks.classList.remove('mobile-menu');
+    menuIcon.classList.remove('fa-xmark');
+    menuIcon.classList.add('fa-bars');
+  });
+});
 
 /*=============== QUESTIONS ACCORDION ===============*/
 const acc = document.getElementsByClassName("accordion");
@@ -35,11 +40,3 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
-
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-
-/*=============== SHOW SCROLL UP ===============*/
-
-/*=============== DARK LIGHT THEME ===============*/
-
-/*=============== SCROLL REVEAL ANIMATION ===============*/

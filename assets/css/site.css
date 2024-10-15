@@ -67,17 +67,78 @@ button {
 }
 .btn:hover {
   background-color: #3e6553d7;
-  color: #ffffff;
   padding: 8px 10px;
   border-radius: 4px;
   width: max-content;
 }
-/* .btn i {
-  transition: 0.3s;
+/*effet down */
+.down {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
 }
-.btn:hover i {
-  transform: translateX(0.25rem);
-} */
+
+.down i {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.3s ease-in-out;
+  animation: none;
+}
+
+.down:hover i {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+/*effet up */
+.up {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+}
+
+.up i {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.3s ease-in-out;
+  animation: none;
+}
+
+.up:hover i {
+  animation: bounceUp 1s infinite;
+}
+
+@keyframes bounceUp {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
 h1 {
   font-size: 3.5rem;
 }
@@ -107,10 +168,20 @@ nav ul {
 nav ul li {
   margin: 0 10px;
 }
-nav ul li a {
-  color: black;
-  font-weight: 500;
+/* style navigation */
+#nav-links li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
 }
+
+#nav-links li a:hover {
+  color: #28a745;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
 .ri-plant-line {
   color: #3e6553;
   font-size: 1.3rem;
@@ -134,17 +205,18 @@ nav ul li a {
 /*responsive*/
 
 @media screen and (max-width: 850px) {
-  /* menu burger a refaire */
   header nav {
-    /* position: fixed; */
+    position: fixed;
+    width: 100vw;
     top: 0;
     z-index: 100;
     padding: 30px 50px;
   }
 
   header nav ul {
+    z-index: 50;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.372);
+    background-color: rgba(0, 0, 0, 0.196);
     backdrop-filter: blur(12px);
     position: absolute;
     width: 100%;
@@ -153,19 +225,27 @@ nav ul li a {
     left: 0;
     text-align: center;
     justify-content: center;
-    margin-left: -100%;
-    transition: all 0.6s ease;
+    /* Modifier cette ligne */
+    transform: translateX(-100%); /* Masquer le menu par défaut */
+    transition: transform 0.6s ease; /* Transition sur le transform */
   }
+
+  header nav ul.mobile-menu {
+    transform: translateX(0); /* Afficher le menu */
+  }
+
   header nav ul li {
     font-size: 1.7rem;
     font-weight: bold;
     margin: 25px 0;
   }
-  .mobile-menu {
-    margin-left: 0;
-  }
+
   .fa-bars {
     visibility: visible;
+  }
+
+  #menuIcon {
+    z-index: 100;
   }
 }
 
@@ -174,7 +254,7 @@ nav ul li a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 150px 0;
+  margin: 150px 0 250px 0;
   position: relative;
 }
 .text-p {
@@ -427,7 +507,7 @@ nav ul li a {
   padding: 10px 100px;
 }
 .accordion {
-  background-color: #cad1ce;
+  background-color: #a7aaa9;
   color: black;
   cursor: pointer;
   padding: 18px;
@@ -624,8 +704,6 @@ footer .logo {
 @media screen and (max-width: 880px) {
   footer {
     flex-direction: column;
-  }
-  footer form {
   }
   footer .card img {
     height: 20px;
